@@ -1,0 +1,171 @@
+@font-face {
+  font-family: "Inter";
+  src: url("assets/fonts/inter/inter-variable.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("assets/fonts/inter/inter-variable.ttf");
+  font-weight: 500;
+}
+:root {
+  --max-width: 1440px;
+  --max-mob: 375px;
+  --while-color: hsl(0, 0%, 100%);
+  --while-color-header: hsl(0, 0%, 70%);
+  --blue-200: hsl(224, 100%, 95%);
+  --blue-400: hsl(220, 100%, 64%);
+  --blue-600: hsl(228, 100%, 60%);
+  --blue-700: hsl(228, 99%, 58%);
+  --black-0: hsl(0, 0%, 0%);
+
+  --fontsize-pa: 17px;
+  --fontsize-foo: 14px;
+  --header-height: 80px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--blue-200);
+  font-family: "Inter";
+  font-weight: 400;
+  color: var(--while-color);
+  line-height: 1.5;
+}
+.pre-color {
+  background-color: var(--blue-700);
+  max-width: var(--max-width);
+  margin: 1rem auto;
+  /* margin-bottom: auto; */
+}
+.header-nav {
+  border-bottom: 1px solid var(--while-color-header);
+  width: 100%;
+  height: var(--header-height);
+}
+.footer-nav {
+  border-top: 1px solid var(--while-color-header);
+  width: 100%;
+  height: var(--header-height);
+}
+.nav-main {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 2rem 3rem;
+}
+.icon-rightheader {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+}
+.left-comp {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+}
+.main-body {
+  width: 100%;
+  display: flex;
+  min-height: 562px;
+  /* justify-content: center; */
+}
+.left-body {
+  width: 48vw;
+  border-right: 1px solid var(--while-color-header);
+}
+.left-comp2 {
+  display: inline-block;
+  font-size: var(--fontsize-foo);
+}
+.whole-left {
+  padding: 10rem 4rem 5rem 2rem;
+}
+.header-lbody {
+  width: 30vw;
+  font-size: 4rem;
+  font-family: "Inter";
+  font-weight: 500;
+  line-height: 4.2rem;
+}
+
+.content-lbody {
+  margin-top: 3rem;
+  font-size: 1rem;
+  font-family: "Inter";
+  width: 65%;
+}
+
+.icon {
+  font-size: 1.5rem;
+}
+
+.number {
+  font-size: 2.5rem;
+  font-weight: 500;
+  line-height: 1;
+}
+
+/* Container using the gap border trick */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 1px;
+  background-color: var(--while-color-header);
+  /* Optional outer border matching the inner lines */
+  border: 1px solid var(--while-color-header);
+  font-family: "Inter";
+  max-width: 800px;
+}
+
+/* Individual cards using Flexbox */
+.stat-card {
+  /* Main card color overlapping the container */
+  padding: 2.5rem;
+  display: flex;
+  background-color: var(--blue-700);
+  flex-direction: column;
+  justify-content: space-between; /* Pushes header up, footer down */
+  min-height: 3px; /* Gives the cards that large, square-like proportion */
+}
+
+/* Top section layout */
+.stat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.icon {
+  font-size: 1.5rem;
+}
+
+.number {
+  font-size: 2.5rem;
+  font-weight: 500;
+  line-height: 1;
+}
+
+/* Bottom section typography */
+.stat-footer h3 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin: 0 0 0.5rem 0;
+}
+
+.stat-footer p {
+  font-size: 0.85rem;
+  margin: 0;
+  /* Slightly faded subtitle */
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.7);
+}
