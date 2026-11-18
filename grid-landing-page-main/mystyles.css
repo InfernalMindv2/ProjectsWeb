@@ -90,7 +90,7 @@ body {
   padding: 10rem 4rem 5rem 2rem;
 }
 .header-lbody {
-  width: 30vw;
+  width: 100%;
   font-size: 4rem;
   font-family: "Inter";
   font-weight: 500;
@@ -124,7 +124,7 @@ body {
   /* Optional outer border matching the inner lines */
   border: 1px solid var(--while-color-header);
   font-family: "Inter";
-  max-width: 800px;
+  max-width: 60vw;
 }
 
 /* Individual cards using Flexbox */
@@ -168,4 +168,40 @@ body {
   /* Slightly faded subtitle */
   line-height: 1.4;
   color: rgba(255, 255, 255, 0.7);
+}
+@media (max-width: 768px) {
+  .whole-left,
+  .main-body,
+  .content-lbody
+   {
+    width: 100%;
+  }
+  .pre-color{
+    min-width: 375px;
+  }
+  .main-body {
+    display: flex;
+    flex-direction: column;
+  }
+  .stat-card {
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height:1rem;
+  }
+  .stats-grid {
+    width: 100vw;
+    grid-template-columns: repeat(1, 1fr);
+    max-width: 100%;
+  }
+  .stat-header {
+    width:100%
+    display: flex;
+    flex-direction: column;
+  }
+  .left-body {
+    width: 100%;
+    border: none;
+  }
 }
